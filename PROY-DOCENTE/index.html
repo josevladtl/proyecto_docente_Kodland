@@ -4,39 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop It! - Juguete Antiestrés</title>
+    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-     <!-- SECTION 1: Inicio Página -->
-<header class="hero">
-  
-  <nav class="hero__nav">
-    <div class="hero__logo">NoBurbujita.ru.</div>
-    <ul class="hero__menu">
-      <li class="hero__menu-item"><a href="#">SOBRE NOSOTROS</a></li>
-      <li class="hero__menu-item"><a href="#">DESCUENTOS</a></li>
-      <li class="hero__menu-item"><a href="#">CONTACTOS</a></li>
-    </ul>
-  </nav>
+    <!-- SECTION 1: Inicio Página (Hero) -->
+    <header class="hero">
+      <nav class="hero__nav">
+        <div class="hero__logo">NoBurbujita.ru.</div>
+        
+        <!-- Botón del menú hamburguesa interactivo para móviles -->
+        <button class="hero__toggle" id="menuToggle" aria-label="Abrir menú">
+          <span class="hero__toggle-bar"></span>
+          <span class="hero__toggle-bar"></span>
+          <span class="hero__toggle-bar"></span>
+        </button>
 
-  <div class="hero__container">
-    <div class="hero__content">
-      <h1 class="hero__title">POP IT!</h1>
-      <p class="hero__subtitle">¡El mejor juguete antiestrés: plástico de burbujas infinito!</p>
-      <button class="hero__button">COMPRAR</button>
-    </div>
-    
-    <div class="hero__image-wrapper">
-     
-      
-    </div>
-  </div>
-</header>
+        <ul class="hero__menu" id="heroMenu">
+          <li class="hero__menu-item"><a class="hero__menu-link" href="#">SOBRE NOSOTROS</a></li>
+          <li class="hero__menu-item"><a class="hero__menu-link" href="#">DESCUENTOS</a></li>
+          <li class="hero__menu-item"><a class="hero__menu-link" href="#">CONTACTOS</a></li>
+        </ul>
+      </nav>
 
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">POP IT!</h1>
+          <p class="hero__subtitle">¡El mejor juguete antiestrés: plástico de burbujas infinito!</p>
+          <button class="hero__button btn-buy">COMPRAR</button>
+        </div>
+        
+        <div class="hero__image-wrapper">
+          
+        </div>
+      </div>
+    </header>
 
-    <!-- SECTION 2: acerca del producto -->
-
+    <!-- SECTION 2: Acerca del producto -->
     <section class="about">
         <h2 class="about__title">¿Qué es Pop it?</h2>
         <p class="about__text">
@@ -45,7 +53,6 @@
     </section>
 
     <!-- SECTION 3: Productos Pop-It -->
-
     <section class="catalog">
         <h2 class="catalog__title">¡Elige tu Pop-It!</h2>
         <div class="catalog__grid">
@@ -53,25 +60,24 @@
             <div class="product-card">
                 <img src="img/square.png" alt="Pop It Cuadrado" class="product-card__image">
                 <h3 class="product-card__name">Cuadrado colorido</h3>
-                <button class="product-card__button">COMPRAR</button>
+                <button class="product-card__button btn-buy">COMPRAR</button>
             </div>
             <!-- Producto 2 -->
             <div class="product-card">
                 <img src="img/amongus.png" alt="Pop It Among Us" class="product-card__image">
                 <h3 class="product-card__name">Among Us jaspeado</h3>
-                <button class="product-card__button">COMPRAR</button>
+                <button class="product-card__button btn-buy">COMPRAR</button>
             </div>
             <!-- Producto 3 -->
             <div class="product-card">
                 <img src="img/round.png" alt="Pop It Redondo" class="product-card__image">
                 <h3 class="product-card__name">Redondo colorido</h3>
-                <button class="product-card__button">COMPRAR</button>
+                <button class="product-card__button btn-buy">COMPRAR</button>
             </div>
         </div>
     </section>
 
-   <!-- SECTION 4: Reglas del Juego -->
-
+    <!-- SECTION 4: Reglas del Juego -->
     <section class="rules">
         <div class="rules__bg-ellipse"></div>
         <div class="rules__container">
@@ -82,28 +88,25 @@
                 </p>
             </div>
             <div class="rules__image-wrapper">
-                <div class="rules__circle-bg"></div>
-                
                 <img src="img/photo.jpg" alt="Jugando con Pop It" class="rules__image">
             </div>
         </div>
     </section>
 
+    <!-- SECTION 5: Pie de Página (Footer) -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">NoBurbujita.ru.</div>
+        <ul class="footer__menu">
+          <li class="footer__item"><a class="footer__link" href="#">Métodos de pago</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Entrega</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Al por mayor</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Contactos</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Vinculación JavaScript -->
     <script src="script.js"></script>
-
-    <!-- --- SECCIÓN 5: PIE DE PÁGINA (FOOTER) --- -->
-     
-<footer class="footer">
-  <div class="footer__container">
-    <div class="footer__logo">NoBurbujita.ru.</div>
-    <ul class="footer__menu">
-      <li class="footer__item"><a href="#">Métodos de pago</a></li>
-      <li class="footer__item"><a href="#">Entrega</a></li>
-      <li class="footer__item"><a href="#">Al por mayor</a></li>
-      <li class="footer__item"><a href="#">Contactos</a></li>
-    </ul>
-  </div>
-</footer>
-
 </body>
 </html>
