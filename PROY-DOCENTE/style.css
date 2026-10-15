@@ -1,0 +1,326 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* --- SECCIÓN 1: HERO (Fondo Completo con background.png) --- */
+.hero {
+  background-image: url('img/background.png'); /* Carga tu imagen como fondo general */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Flexbox: Hace que se estire y cubra toda el área  */
+  padding: 20px 8% 80px 8%;
+  position: relative;
+  overflow: hidden;
+  min-height: 550px; /* Grid:Le da la altura necesaria para que luzca la imagen */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de navegación superior */
+.hero__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.hero__logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hero__menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.hero__menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Contenedor de textos alineados a la izquierda */
+.hero__container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio izquierdo */
+}
+
+.hero__content {
+    text-align: left; /* Alineación del texto a la izquierda */
+    color: #ffffff;
+    max-width: 550px;
+}
+
+.hero__title {
+    font-size: 5.5rem; 
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.hero__button {
+    background-color: #bbf2f6;
+    color: #333;
+    padding: 14px 45px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Área de la imagen */
+.hero__image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 400px; 
+}
+
+/* Estilos de la imagen del juguete */
+.hero__image {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  background: transparent !important; 
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+}
+
+/* --- SECCIÓN 2:  (Texto Informativo) --- */
+.about {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.about__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* --- SECCIÓN 3: la parte de los productos (Fondo Turquesa Claro) --- */
+.catalog {
+    background-color: #e4f9f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.catalog__title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.catalog__grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.product-card {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card__image {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-card__name {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-card__button {
+    background-color: #ffb85c;
+    color: #ffffff;
+    padding: 10px 35px;
+    font-size: 0.9rem;
+}
+
+/* --- SECCIÓN 4: Reglas del Juego (Inferior Naranja con imagen de Óvalo ) --- */
+.rules {
+    background-image: url('img/bg-grid2.png'); 
+    background-repeat: no-repeat;
+    background-position: left center; 
+    background-size: contain; 
+    padding: 80px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.rules__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2; 
+}
+
+.rules__content {
+    max-width: 550px;
+}
+
+.rules__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.rules__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.rules__image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.rules__image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* --- Sitio web adaptable RESPONSIVE  --- */
+
+/* Adelante a diferentes tamaños de pantallas) */
+
+@media (min-width: 768px) {
+    .hero__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero__content {
+        text-align: left;
+    }
+
+    .catalog__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rules__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/* --- SECCIÓN 5:  (Pie de página negro) --- */
+.footer {
+    background-color: #232323; 
+    padding: 30px 8%;
+    width: 100%;
+}
+
+.footer__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+}
+
+.footer__logo {
+    color: #ffffff; /* Texto blanco para el nombre de la marca */
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer__menu {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* Espaciado horizontal entre cada enlace */
+    margin: 0;
+    padding: 0;
+}
+
+.footer__item a {
+    color: #ffffff; /* Enlaces en color blanco */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.footer__item a:hover {
+    opacity: 0.8; /* Efecto sutil al pasar el mouse por encima */
+}
+
+/* Adaptación para pantallas de teléfonos celulares */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer__menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
